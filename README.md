@@ -96,6 +96,63 @@ Dockerfile Avantajları:
 
 Dockerfile, Docker imajlarının nasıl oluşturulacağını belirleyen bir betik dosyasıdır. İçerisinde kullanılan talimatlarla, bir uygulamanın çalışması için gereken ortamı tanımlayarak, imajın tekrarlanabilir ve paylaşılabilir olmasını sağlar. Dockerfile, Docker ekosisteminin temel taşlarından biridir ve konteynerleştirilmiş uygulamaların yönetimini büyük ölçüde kolaylaştırır.
 
+## MariaDB:
+  Popüler bir açık kaynaklı ilişkisel vertabanı yönetim sistemi (RDBMS) olan MySQL'in bir forku olarak geliştirilmiştir.
+  MariaDB, açık kaynaklı, güvenilir, performanslı ve esnek bir ilişkisel veritabanı sistemidir. MySQL ile tam uyumlu olduğu için, MySQL'den MariaDB'ye geçiş oldukça kolaydır. Özellikle güvenlik, hız ve topluluk desteği konularında avantaj
+
+MariaDB özellikleri:
+- açık kaynak: tamamen açık kaynaklı bir proje olarak geliştirilmektedir ve GPl lisansı altında dağıtılmaktadır.
+- MySQL uyumluluğu: MySQL'in komutlarına, API'lerine ve kütüphanelerine tam uyumluluk sağlar.
+- İleri düzey performans ve optimizasyon: performans iyileştirmeleri ve yeni özelliklerle MySQL'e göre avantajlar sağlar. Özellikle MySQL'e göre sorgu performansı ve ölçeklenebilirlik konusunda iyileştirmeler yapılmıştır.
+- Gelişmiş depolama metodları:  MariaDB'de varsayılan depolama motoru olarak Aria kullanılır. Ayrıca, TokuDB, MyRocks, Spider ve diğerleri gibi çeşitli depolama motorlarını destekler.
+- Güvenlik iyileştirmeleri: şifrelenmiş tablolar ve veritabanı işlemleri için çeşitli güvenlik geliştirmeleri yapılmıştır.
+- Topluluk Odaklı: MySQL’in aksine, MariaDB tamamen topluluk odaklı bir projedir ve kararlar topluluk tarafından alınır.
+- MySQL'de bulunmayan bazı ek özellikler ve iyileştirmeler içerir
+    - Sanal sütünlar: Veri saklama sırasında hesaplanan sütunlar ekleyebilirsiniz.
+    - yayınla-Abone ol (Publish-Subscribe): Bir tabloya gelen değişiklikleri başka bir tabloya veya veritabanına yayınlayabilir.
+    - JSON ve Dinamik kolon desteği: JSON verilerini saklamak için gelişmiş destek sunar.
+
+MariaDB kullanım alanları:
+- web uygulamaları: Tıpkı MySQL gibi dinamik web siteleri ve uygulamalar için popüler bir veritabanı çözümüdür. WordPress gibi içerik yönetim sistemleri MariaDB kullanabilir.
+- İşletme Uygulamaları: Büyük ölçekli işletmeler, MariaDB'nin güvenilirliği ve ölçeklenebilirliği nedeniyle bu sistemi kullanmayı tercih edebilir.
+- Clout (bulut) ortamları: MariaDB, bulut tabanlı hizmetler ve platformlarla da uyumludur ve AWS, Google Cloud, Azure gibi birçok bulut sağlayıcı tarafından desteklenir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
