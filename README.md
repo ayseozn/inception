@@ -131,7 +131,34 @@ NGINX Kullanım Alanları:
 NGINX, yüksek performanslı bir web ve ters proxy sunucusu olup, aynı zamanda yük dengeleme, HTTP önbellekleme ve SSL/TLS desteği sunar. Olay tabanlı mimarisi sayesinde düşük bellek kullanımıyla çok sayıda eşzamanlı bağlantıyı yönetebilir. Hem HTTP hem de TCP/UDP trafiğini yönlendirebilir, dinamik ve statik içerikleri sunabilir, ayrıca güvenliği artıran ters proxy işlevi görür. Gelişmiş yapılandırma seçenekleri ve modüler yapısı ile büyük ölçekli sistemlerde güvenilir bir çözüm sağlar.
 
 
-## TLS sertifikası
+### TLS sertifikası (Transport Layer Security sertifikası)
+  Bir web sitesi sunucusu ile istemci arasında güvenli bir bağlantı sağlamak için kullanılan bir dijital sertifikadır. Bu sertifika, bir web sitesibin kimliğini doğrular ve site ile kullanıcılar arasında iletilen verilerin şifrelenmesini sağlar. 
+  Kısaca internet üzerindeki veri güvenliğini sağlamak, kimlik doğrulaması yapmak ve kullanıcıların güvende hissetmesini sağlamak için önemlidir.
+
+  TLS, ```SSL```'in (Secure Sockets Layer) geliştirilmiş bir sürümüdür. SSL artık güncel olmadığı için TLS kullanılır, ancak genellikle SSL sertifikası terimi TLS sertifikalarıyla birbirinin yerine kullanılabilir.
+
+TLS Sertifikalarının Çalışma Şekli:
+  - Sertifika Otoritesi (CA): CA bir güvenilir üçüncü taraf olarak web sitesinin gerçekten iddia ettiği kişi ya da kuruluş tarafından yönetilip yönetilmediğini denetler,  başvuru sahibinin kimliğini ve alan adı üzerinde yetkisi olup olmadığını çeşitli yöntemlerle doğrular. denetlemeler sonucu onay alırsa TLS sertifikası verir. CA, web sitelerinin güvenilirliğini sağlayan bir yetkilendirme otoritesidir.
+  - Anahtar Çifti: TLS sertifikaları, açık anahtar ve özel anahtar olmak üzere iki anahtarla çalışır. Açık anahtar, sertifikada yer alır ve herkes tarafından kullanılabilir. Özel anahtar ise sunucuda tutulur ve şifreleme işlemlerinde kullanılır.
+  - El Sıkışma (Handshake):stemci (örneğin bir tarayıcı), web sunucusuna bağlanmaya çalıştığında bir el sıkışma işlemi başlatılır. Bu işlem sırasında sunucu, istemciye TLS sertifikasını gönderir ve taraflar arasında güvenli bir bağlantı kurulur.
+
+TLS sertifikasının işlevleri:
+  - Kimlik Doğrulama: Sertifika, web sunucusunun gerçek bir işletme veya kişi tarafından yönetildiğini doğrular.
+  - Veri Şifreleme: TLS, sunucu ile istemci (örneğin, bir tarayıcı ve web sitesi) arasındaki veri iletimini şifreler. Bu, hassas verilerin (şifreler, kredi kartı bilgileri, kişisel bilgiler) güvenli bir şekilde iletilmesini sağlar ve bu verilerin üçüncü şahıslar tarafından ele geçirilmesini engeller.
+  - Veri Bütünlüğü: Sertifika ayrıca iletilen verilerin bütünlüğünü sağlar, yani verilerin gönderilirken değişmediğinden emin olunur.
+
+TLS Sertifikasının Türleri:
+  - Domain Doğrulamalı (DV) Sertifikalar: Yalnızca domain adının sahipliğini doğrular. En basit ve en yaygın sertifika türüdür.
+  - Kuruluş Doğrulama (OV) Sertifikalar: Domain sahibinin kimliğinin yanı sıra kuruluşun varlığını da doğrular.
+  - Genişletilmiş Doğrulamalı (EV) Sertifikalar: En güvenilir sertifika türüdür ve şirketlerin kimliğini ayrıntılı bir doğrulama sürecinden geçirir. Bu tür sertifikalar, tarayıcıda şirket adının gösterilmesine olanak tanır.
+
+
+
+
+
+
+
+
 
 
 
