@@ -118,6 +118,20 @@ MariaDB kullanım alanları:
 - Clout (bulut) ortamları: MariaDB, bulut tabanlı hizmetler ve platformlarla da uyumludur ve AWS, Google Cloud, Azure gibi birçok bulut sağlayıcı tarafından desteklenir.
 
 
+## NGINX
+  Yüksek performanslı, açık kaynaklı bir web sunucusu ve ters proxy sunucusudur. ilk başta web sunucusu olarak geliştirilmiştir ancak aynı zamanda load balancer (yük dengeleme), HTTP ön bellek sunucusu, ve IMAP/POP3 proxy sunucusu gibi işlevlerde sunar.
+
+NGINX Kullanım Alanları:
+- web sunucusu: Yüksek performanslı web siteleri ve uygulamaları için statik ve dinamik içerik sunma görevini üstlenir. Dünya çapındaki en yoğun trafikli web siteleri arasında, NGINX çok yaygın olarak kullanılır (örneğin, Netflix, Dropbox, WordPress).
+- Ters Proxy: NGINX, istemci isteklerini arka uç sunuculara yönlendirmek için kullanılır. Bu sayede istemciler, arka plandaki sunucuların doğrudan IP adreslerini göremezler, bu da güvenlik sağlar.
+- Yük dengeleme: Yüksek trafikli sitelerde ve uygulamalarda, NGINX, istekleri birden fazla sunucuya dağıtarak sistemin daha dengeli ve hızlı çalışmasını sağlar.
+- Önbellekleme: NGINX, sık kullanılan içerikleri önbelleğe alarak sunucunun iş yükünü azaltır ve yanıt süresini hızlandırır. Bu özellik, özellikle performansın önemli olduğu projelerde kullanılır.
+- Mikroservis Mimarileri: Mikroservis tabanlı uygulamalarda NGINX, her bir mikroservise gelen istekleri yönlendirmek için kullanılabilir.
+
+NGINX, yüksek performanslı bir web ve ters proxy sunucusu olup, aynı zamanda yük dengeleme, HTTP önbellekleme ve SSL/TLS desteği sunar. Olay tabanlı mimarisi sayesinde düşük bellek kullanımıyla çok sayıda eşzamanlı bağlantıyı yönetebilir. Hem HTTP hem de TCP/UDP trafiğini yönlendirebilir, dinamik ve statik içerikleri sunabilir, ayrıca güvenliği artıran ters proxy işlevi görür. Gelişmiş yapılandırma seçenekleri ve modüler yapısı ile büyük ölçekli sistemlerde güvenilir bir çözüm sağlar.
+
+
+## TLS sertifikası
 
 
 
