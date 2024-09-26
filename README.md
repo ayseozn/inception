@@ -117,6 +117,14 @@ MariaDB kullanım alanları:
 - İşletme Uygulamaları: Büyük ölçekli işletmeler, MariaDB'nin güvenilirliği ve ölçeklenebilirliği nedeniyle bu sistemi kullanmayı tercih edebilir.
 - Clout (bulut) ortamları: MariaDB, bulut tabanlı hizmetler ve platformlarla da uyumludur ve AWS, Google Cloud, Azure gibi birçok bulut sağlayıcı tarafından desteklenir.
 
+## WordPress
+  Wen siteleri ve blok oluiturmak için kullanılan açık kaynaklı bir içerik yönetim sistemidir(CMS). Teknik bilgiye gerek kalmadan web sitesi geliştirebilmenizi sağlar. 
+
+Temel Özellikleri:
+- Kullanıcı dostu arayüz: Teknik bilgi gerektirmeyen basit bir yönetim paneline sahiptir.
+- Esneklik: Farklı amaçlara uygun web siteleri oluşturmak için temalar ve eklentiler sunar.
+- Açık kaynak: Ücretsizdir ve geliştiriciler tarafından sürekli geliştirilir.
+- SEO Uyumlu: Arama motoru optimizasyonu (SEO) için uygun alt yapıya sahiptir.
 
 ## NGINX
   Yüksek performanslı, açık kaynaklı bir web sunucusu ve ters proxy sunucusudur. ilk başta web sunucusu olarak geliştirilmiştir ancak aynı zamanda load balancer (yük dengeleme), HTTP ön bellek sunucusu, ve IMAP/POP3 proxy sunucusu gibi işlevlerde sunar.
