@@ -54,10 +54,10 @@ bu örnek iki servis tanımlar:
   - ```RUN``` : Konteynerin içinde çalıştırılacak bir komut tanımlar. Yazılım kurulumu, paketlerin güncellenmesi vb.
   - ``COPY`` veya ``ADD`` : Dosyaları veya dizinleri yerel sistemden docker imajına kopyalar.
   - ``WORKDIR`` : Komutların çalıştırılacağı çalışma dizinini belirler. bu komutta belirtilen dizin sonraki komutların çalıştırılacağı yer olur.
-  - ``CMD`` : konteyner çalıştırıldığında varsayılan olarak çalıştırılacak komutu belirler. her Dockerfile'da bir tane cmd olabilir.
   - ``EXPOSE`` : Konteynerin dinleyeceği portu belirtir, yani konteynerin iletişim kuracağı port
   - ``ENV`` : Ortam değişkenlerini tanımlar.
-  - ``ENTRYPOINT`` : konteynerin her zaman çalıştırması gereken ana komutu belirtir. CMD ile kulanılabilir, ancak konteyner başladığında başka bir komut verilse bile ENTRYPOINT her zaman çalışır.
+  - ``CMD`` : konteyner çalıştırıldığında varsayılan olarak çalıştırılacak komutu belirler. her Dockerfile'da bir tane cmd olabilir. container çalıştığında varsayılan değerleri ayarlamak için kullanılır. ```docker run <image_name> <command>``` şeklinde bir komut gelirse cmd geçersiz kılınır.
+  - ``ENTRYPOINT`` : konteynerin her zaman çalıştırması gereken ana komutu belirtir. CMD ile kulanılabilir, ancak konteyner başladığında başka bir komut verilse bile ENTRYPOINT her zaman çalışır. 
 
 örnek Dockerfile:
   ```Dockerfile
