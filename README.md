@@ -162,9 +162,23 @@ TLS Sertifikasının Türleri:
   - Kuruluş Doğrulama (OV) Sertifikalar: Domain sahibinin kimliğinin yanı sıra kuruluşun varlığını da doğrular.
   - Genişletilmiş Doğrulamalı (EV) Sertifikalar: En güvenilir sertifika türüdür ve şirketlerin kimliğini ayrıntılı bir doğrulama sürecinden geçirir. Bu tür sertifikalar, tarayıcıda şirket adının gösterilmesine olanak tanır.
 
-
-
-
+# Aklımda Bulunması Gereken Komutlar:
+- ``docker version`` : yüklü docker engine versiyonunu öğrenmek ve docker engine ile iletişim kurabilecek client versiyonunu görebilir.
+- ``docker info`` : sistemde yüklü olan docker engine hakkında bilgi edinmek için kullanılır.
+- ``docker`` : docker CLI ile kullanabileceğim komutları göserir.
+- ``docker 'komut_Adı' --help`` : girilen komutun ne olduğu, nasıl kullanıldığı, altındaki opsiyonlar hakkında bilgiler verir.
+- ``docker run ...`` : yeni bir container çalıştırmak veiçerisinde komut çalıştırmak için kullanılır.
+- ``docker run -d ...`` : containeri detached modda çalıştırır.(container arkada çalışır ve terminalime stdout ve stderror çıkışlarını bağlamaz.)
+- ``docker ps`` : çalışan container listesine bakmak için.
+- ``docker ps -a`` : hem çalışan hem durdurulmuş containerlere bakmak için.
+- ``inspect`` : docker objesi hakkında daha detaylı bilgi için. (docker container(yada image) inspect ID(yada ismi))
+- ``docker stop ID(isim)`` : çalışsan containeri durdurmak için kullanılır. Container silinmez daha sonra yeniden başlatılabilir.
+- ``docker start ID(isim)`` : stop durumdaki containeri yaniden çalıştırmak için. Sade durdurlmuş containerleri çalıştırır. yeni container oluşturamaz.
+- ``docker-compose up`` : docker compose tarafından yönetilen tüm servisleri ve konteynerleri durdurur ve siler. docker-compose projesini durdurmak ve kaynakları serbest bırakmak için kullanılır. ``-v`` eki ile konteynerle beraber bağlı kaynaklar (Network ve volume) da silinir.
+- ``docker-compose down`` : docker-compose.yml dosyasındaki tüm servisleri başlatmak için kullanılır. servis yoksa yeniden oluşturulur. ``-d`` ile arka planda çalıştırılabilir.
+- ``docker logs ID(isim)`` : containerin içerisindeki logara bakmak için.
+- ``docker rm ID(yada ismi)`` : stop durumundaki containeri sistemden silmek için kullanılır.
+- ``docker rm -f ID(yada isim)`` : çalışır durumdaki containeri silmek için.
 
 
 
