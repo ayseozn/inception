@@ -226,14 +226,15 @@ wordpress yönetici bilgileri:
   Docker compose dosyası, çeşitli servislerin nasıl oluşturulacağını ve birbirleriyle nasıl etkileşime gireceğini tanımlar.
 
 
-database kullanıcıları listeleme:
-- docker exec -it mariadb bash
-- mysql -u root -p
-- show databases;
-- use wordpress;
-- show tables;
-- select * from wp_user;
-   
+### database kullanıcıları listeleme:
+
+- ``docker exec -it mariadb bash`` :  MariaDB container'ının içinde bir terminal açar.
+- ``mysql -u root -p`` : MySQL/MariaDB veritabanına root kullanıcısı olarak giriş yapmanızı sağlar.
+- ``show databases;`` : Mevcut veritabanlarını listeler.
+- ``use wordpress;`` : wordpress adlı veritabanını seçer.
+- ``show tables;`` : Seçili veritabanındaki tabloları listeler.
+- ``select * from wp_users;`` : wp_users tablosundaki tüm verileri sorgular.
+
 
 
 
