@@ -167,8 +167,13 @@ TLS Sertifikasının Türleri:
 - ``docker info`` : sistemde yüklü olan docker engine hakkında bilgi edinmek için kullanılır.
 - ``docker`` : docker CLI ile kullanabileceğim komutları göserir.
 - ``docker 'komut_Adı' --help`` : girilen komutun ne olduğu, nasıl kullanıldığı, altındaki opsiyonlar hakkında bilgiler verir.
-- ``docker run ...`` : yeni bir container çalıştırmak veiçerisinde komut çalıştırmak için kullanılır.
+- ``docker run ...`` : yeni bir container çalıştırmak ve içerisinde komut çalıştırmak için kullanılır.
+    - ``docker run Hello-world`` : Hello-world isimli imageden bir tane container oluşturmak istediğimi belirttim.
+    - ``docker run --name container1 Hello-word`` : yine Hello-world imajından container oluşturdum, ama bu sefer containerin ismi random verilmedi ben istediğim ismi koydum.
+    - ``docker run --name container2 httpd date`` httpd den bir container oluşturracağım. dateyi eklemeseydim sadece varsayılan olan httpd-forey... uygulaması çalışacaktı, ama şuan varsayılan uygulamaya ek date uygulamasınıda çalıştıracak.(date uygulamasının kapanması cantaineri etkilemez ama varsayılan uygulama kapanırsa container da kapanır.)
 - ``docker run -d ...`` : containeri detached modda çalıştırır.(container arkada çalışır ve terminalime stdout ve stderror çıkışlarını bağlamaz.)
+- ``docker exec 'container ismi' 'çalıştırmak istediğimiz komut'`` : Container çalıştığında çalışan varsayılan uygulamaya ek başka bir uygulama daha çalıştırmak istiyorsak kullanılır.
+- ``docker exec -it 'conainer adı' sh`` : çalışan conatainere sanki bir linux sanal makineye bağlanıyor gibi bağlanmamızı sağlar. (-it: exec ile istediğimiz containere interaktir bir suda terminal bağlantısı açmak için, sh: hangi shell çalışacaksa ona bağlanmak için) 
 - ``docker ps`` : çalışan container listesine bakmak için.
 - ``docker ps -a`` : hem çalışan hem durdurulmuş containerlere bakmak için.
 - ``inspect`` : docker objesi hakkında daha detaylı bilgi için. (docker container(yada image) inspect ID(yada ismi))
@@ -181,7 +186,54 @@ TLS Sertifikasının Türleri:
 - ``docker rm -f ID(yada isim)`` : çalışır durumdaki containeri silmek için.
 
 
+## sorular:
+### Docker Compose avantajları:
 
+- tek komutla bailatma
+- yapılandırma kolaylığı
+- ortam değişkenleri ve ağ yaılandırması
+- servis bağımlılıkları
+- tek komutla dondurma
+
+### Sanal Makine ve Container Arasındaki Farklar:
+
+- Esneklik: En karmaşık uygulamalar bile container üzerinden yayınlanabilir.
+- Hafif Yük: Container linux kernel kullanır. Sanal makineler ise her biri ayrı işletim sistemi kullanır.
+- Taşınabilirlik: Local' de çalıştırıp, bulut sunucu üzerinde yayınlayı her yere taşınır.
+- Ölçeklenebşlirlik: Çalşan servisler üzerindeki trefiğe göre yeni container ortaya çıkarabilir.
+
+### .yml ve .env dosyaları:
+ Docker compose kullanrak bir web uygulamasının alt yapılandırmasını sağlar. Bu yapılandırma dosyaları, veritabanı(mariaDB), web uygulaması(wordpress) ve ters proxy(Nginx) gibi himetlerin bir arada çalışmasını sağlar.
+
+ #### .env dosyası:
+   .env dosyası, uygulama içi çevresel değişkenleri tanımlar. bu dosya uygulamanın çalışması için gerekli olan hassas bilgileri ve yapılandırma ayarlarını içerir.
+
+- DOMAIN_NAME = uygulamanın hizmet vereceği alan adı.
+- TITLE = uygulamanın adı veya başlığı.
+- CERFICATES_OUT = SSL sertifikasının saklanacağı dosya yolu
+- CERTIFICATES_KEYOUT = SSL sertifikası anahtarının saklanacağı dosya yolu
+- MySQL() mariaDB veritabanı bilgileri
+- MySQL_DATABASE_NAME = MySQL veritabanının adı
+- MYSQL_PASSWORD = MySQL kullanıcı şifresi
+- MYSQL_EMAIL = MySQL ile ilgili e-posta adresi
+
+wordpress yönetici bilgileri:
+
+- WORDPRESS_ADMIN_NAME = wordpress yönetici kullanıcı adı.
+- WORDPRESS_ADMIN_EMAIL = wordpress yönetici e-posta adresi
+
+#### .yml dosyası:
+  Docker compose dosyası, çeşitli servislerin nasıl oluşturulacağını ve birbirleriyle nasıl etkileşime gireceğini tanımlar.
+
+
+database kullanıcıları listeleme:
+- docker exec -it mariadb bash
+- mysql -u root -p
+- show databases;
+- use wordpress;
+- show tables;
+- select * from wp_user;
+   
 
 
 
