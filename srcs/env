@@ -1,0 +1,13 @@
+DOMAIN_NAME = aysozen.42.fr 
+TITLE = Inception
+CERTIFICATES_OUT = /etc/ssl/certs/inception.crt
+CERTIFICATES_KEYOUT = /etc/ssl/private/inception.key
+ 
+MYSQL_DATABASE_NAME = wordpress 
+MYSQL_USER = aysozen
+MYSQL_PASSWORD = 123
+MYSQL_EMAIL = aysozen@42.fr
+ 
+WORDPRESS_ADMIN_NAME = aysozen
+WORDPRESS_ADMIN_PASSWORD = aysozen123
+WORDPRESS_ADMIN_EMAIL = aysozen@42.fr
