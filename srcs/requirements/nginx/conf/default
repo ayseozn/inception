@@ -20,3 +20,11 @@ server {
 		fastcgi_read_timeout 300s; 
 	} 
 }
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name aysozen.42.fr;
+
+    return 444;
+}
