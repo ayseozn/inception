@@ -73,3 +73,27 @@ volumes:
       type: none
       o: bind
       device: /home/aysozen/data/mariadb
+
+secrets:
+  DOMAIN_NAME:
+    external: true
+  TITLE:
+    external: true
+  CERTIFICATES_OUT:
+    external: true
+  CERTIFICATES_KEYOUT:
+    external: true
+  MYSQL_DATABASE_NAME:
+    external: true
+  MYSQL_USER:
+    external: true
+  MYSQL_PASSWORD:
+    external: true
+  MYSQL_EMAIL:
+    external: true
+  WORDPRESS_ADMIN_NAME:
+    external: true
+  WORDPRESS_ADMIN_PASSWORD:
+    external: true
+  WORDPRESS_ADMIN_EMAIL:
+    external: true
