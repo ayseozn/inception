@@ -4,8 +4,13 @@ services:
   mariadb:
     container_name: mariadb
     build: ./requirements/mariadb
-    env_file:
-      - .env
+#   env_file:
+#    - .env
+    secrets:
+      - MYSQL_DATABASE_NAME
+      - MYSQL_USER
+      - MYSQL_PASSWORD
+      - MYSQL_EMAIL
     networks:
       - inception
     volumes:
@@ -14,8 +19,14 @@ services:
   wordpress:
     container_name: wordpress
     build: ./requirements/wordpress
-    env_file:
-      - .env
+#    env_file:
+#      - .env
+    secrets:
+      - WORDPRESS_ADMIN_NAME
+      - WORDPRESS_ADMIN_PASSWORD
+      - WORDPRESS_ADMIN_EMAIL
+      - DOMAIN_NAME
+      - TITLE
     networks:
       - inception
     volumes:
@@ -26,8 +37,12 @@ services:
   nginx:
     container_name: nginx
     build: ./requirements/nginx
-    env_file:
-      - .env
+#    env_file:
+#      - .env
+    secrets:
+      - CERTIFICATES_OUT
+      - CERTIFICATES_KEYOUT
+      - DOMAIN_NAME
     ports:
       - "443:443"
     networks:

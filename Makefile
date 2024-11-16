@@ -1,6 +1,7 @@
 all:
 	@mkdir -p /home/aysozen/data/wordpress
 	@mkdir -p /home/aysozen/data/mariadb
+	@bash srcs/create_secrets.sh
 	@docker-compose -f srcs/docker-compose.yml up --build
 
 start:
