@@ -11,7 +11,7 @@ stop:
 
 clean:
 	@docker-compose -f srcs/docker-compose.yml down --volumes
-	@sudo rm -rf /home/ayse/data
+	@rm -rf /home/ayse/data
 
 fclean: clean
 	@docker system prune -af

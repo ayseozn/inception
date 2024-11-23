@@ -26,5 +26,5 @@ server {
     listen [::]:80;
     server_name aysozen.42.fr;
 
-    return 404;
+    return 444;
 }
