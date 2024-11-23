@@ -1,5 +1,21 @@
 docker stop $(docker ps -qa); docker rm $(docker ps -qa); docker rmi -f $(docker images -qa); docker volume rm $(docker volume ls -q); docker network rm $(docker network ls -q) 2>/dev/null
 
+
+DOMAIN_NAME = aysozen.42.fr 
+TITLE = Inception
+CERTIFICATES_OUT = /etc/ssl/certs/inception.crt
+CERTIFICATES_KEYOUT = /etc/ssl/private/inception.key
+ 
+MYSQL_DATABASE_NAME = wordpress
+
+MYSQL_USER = aysoze
+MYSQL_EMAIL = aysoze@42.fr
+
+WORDPRESS_ADMIN_EMAIL = aysozen@42.fr
+
+
+
+
 # inception
 
 ## Docker Compose
