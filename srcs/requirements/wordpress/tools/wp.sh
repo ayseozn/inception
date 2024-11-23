@@ -5,6 +5,9 @@ chmod -R 755 /var/www/*;
 mkdir -p /run/php/;
 touch /run/php/php7.4-fpm.pid;
 
+MYSQL_PASSWORD=$(cat /run/secrets/db_password)
+. /run/secrets/credentials;
+
 if [ ! -f /var/www/html/wp-config.php ]; then
     mkdir -p /var/www/html;
     cd /var/www/html;
