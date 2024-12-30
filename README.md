@@ -1,21 +1,3 @@
-docker stop $(docker ps -qa); docker rm $(docker ps -qa); docker rmi -f $(docker images -qa); docker volume rm $(docker volume ls -q); docker network rm $(docker network ls -q) 2>/dev/null
-
-
-DOMAIN_NAME = aysozen.42.fr 
-TITLE = Inception
-CERTIFICATES_OUT = /etc/ssl/certs/inception.crt
-CERTIFICATES_KEYOUT = /etc/ssl/private/inception.key
- 
-MYSQL_DATABASE_NAME = wordpress
-
-MYSQL_USER = aysoze
-MYSQL_EMAIL = aysoze@42.fr
-
-WORDPRESS_ADMIN_EMAIL = aysozen@42.fr
-
-
-
-
 # inception
 
 ## Docker Compose
@@ -226,34 +208,8 @@ TLS Sertifikasının Türleri:
  #### .env dosyası:
    .env dosyası, uygulama içi çevresel değişkenleri tanımlar. bu dosya uygulamanın çalışması için gerekli olan hassas bilgileri ve yapılandırma ayarlarını içerir.
 
-- DOMAIN_NAME = uygulamanın hizmet vereceği alan adı.
-- TITLE = uygulamanın adı veya başlığı.
-- CERFICATES_OUT = SSL sertifikasının saklanacağı dosya yolu
-- CERTIFICATES_KEYOUT = SSL sertifikası anahtarının saklanacağı dosya yolu
-- MySQL() mariaDB veritabanı bilgileri
-- MySQL_DATABASE_NAME = MySQL veritabanının adı
-- MYSQL_PASSWORD = MySQL kullanıcı şifresi
-- MYSQL_EMAIL = MySQL ile ilgili e-posta adresi
-
-wordpress yönetici bilgileri:
-
-- WORDPRESS_ADMIN_NAME = wordpress yönetici kullanıcı adı.
-- WORDPRESS_ADMIN_EMAIL = wordpress yönetici e-posta adresi
-
 #### .yml dosyası:
   Docker compose dosyası, çeşitli servislerin nasıl oluşturulacağını ve birbirleriyle nasıl etkileşime gireceğini tanımlar.
-
-
-### database kullanıcıları listeleme:
-
-- ``docker exec -it mariadb bash`` :  MariaDB container'ının içinde bir terminal açar.
-- ``mysql -u root -p`` : MySQL/MariaDB veritabanına root kullanıcısı olarak giriş yapmanızı sağlar.
-- ``show databases;`` : Mevcut veritabanlarını listeler.
-- ``use wordpress;`` : wordpress adlı veritabanını seçer.
-- ``show tables;`` : Seçili veritabanındaki tabloları listeler.
-- ``select * from wp_users;`` : wp_users tablosundaki tüm verileri sorgular.
-
-
 
 
 
