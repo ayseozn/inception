@@ -186,37 +186,6 @@ TLS Sertifikasının Türleri:
 - ``docker rm -f ID(yada isim)`` : çalışır durumdaki containeri silmek için.
 
 
-## sorular:
-### Docker Compose avantajları:
-
-- tek komutla bailatma
-- yapılandırma kolaylığı
-- ortam değişkenleri ve ağ yaılandırması
-- servis bağımlılıkları
-- tek komutla dondurma
-
-### Sanal Makine ve Container Arasındaki Farklar:
-
-- Esneklik: En karmaşık uygulamalar bile container üzerinden yayınlanabilir.
-- Hafif Yük: Container linux kernel kullanır. Sanal makineler ise her biri ayrı işletim sistemi kullanır.
-- Taşınabilirlik: Local' de çalıştırıp, bulut sunucu üzerinde yayınlayı her yere taşınır.
-- Ölçeklenebşlirlik: Çalşan servisler üzerindeki trefiğe göre yeni container ortaya çıkarabilir.
-
-### .yml ve .env dosyaları:
- Docker compose kullanrak bir web uygulamasının alt yapılandırmasını sağlar. Bu yapılandırma dosyaları, veritabanı(mariaDB), web uygulaması(wordpress) ve ters proxy(Nginx) gibi himetlerin bir arada çalışmasını sağlar.
-
- #### .env dosyası:
-   .env dosyası, uygulama içi çevresel değişkenleri tanımlar. bu dosya uygulamanın çalışması için gerekli olan hassas bilgileri ve yapılandırma ayarlarını içerir.
-
-#### .yml dosyası:
-  Docker compose dosyası, çeşitli servislerin nasıl oluşturulacağını ve birbirleriyle nasıl etkileşime gireceğini tanımlar.
-
-
-
-
-
-
-
 
 
 
